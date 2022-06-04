@@ -3,6 +3,7 @@ import db from '..';
 
 export default class Post extends Model {
   id?: number;
+  accountId?: number;
   title?: string;
   body?: string;
   firstUpload?: Date;
@@ -16,6 +17,11 @@ Post.init({
     primaryKey: true,
     allowNull: false,
     autoIncrement: true,
+  },
+  accountId: {
+    field: 'accountId',
+    type: DataTypes.INTEGER,
+    allowNull: false,
   },
   title: {
     field: 'title',

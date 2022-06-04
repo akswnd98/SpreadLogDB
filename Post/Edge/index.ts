@@ -3,6 +3,7 @@ import db from '../..';
 
 export default class Edge extends Model {
   id?: number;
+  accountId?: number;
   fromId?: number;
   toId?: number;
 };
@@ -14,6 +15,11 @@ Edge.init({
     primaryKey: true,
     allowNull: false,
     autoIncrement: true,
+  },
+  accountId: {
+    field: 'accountId',
+    type: DataTypes.INTEGER,
+    allowNull: false,
   },
   fromId: {
     field: 'fromId',
