@@ -1,11 +1,13 @@
 import { Model, DataTypes } from 'sequelize';
 import db from '../..';
+import Post from '..';
 
 export default class Edge extends Model {
   id?: number;
   accountId?: number;
   fromId?: number;
   toId?: number;
+  ToCompare?: Post[];
 };
 
 Edge.init({

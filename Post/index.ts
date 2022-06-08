@@ -1,5 +1,6 @@
 import { Model, DataTypes } from 'sequelize';
 import db from '..';
+import { PostEdge } from '../relations';
 
 export default class Post extends Model {
   id?: number;
@@ -8,6 +9,7 @@ export default class Post extends Model {
   body?: string;
   firstUpload?: Date;
   lastUpdate?: Date;
+  FromCompare?: PostEdge;
 };
 
 Post.init({
